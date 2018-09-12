@@ -13,6 +13,8 @@ node ('prod') {
              sh "hostname"
              echo "${env.BUILD_NUMBER}"
              sh 'docker build -t saiprasad169/website-test -f webpage .'
+             pwd 
+             sh "hostname"
     }
     stage('Push Image') {
             docker.withRegistry('https://registry.hub.docker.com', 'f4fc89d0-de17-47ed-b9f4-ab5ebbe5cf39') {
