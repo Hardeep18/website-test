@@ -1,7 +1,7 @@
 version: '3'
 services:
     app:
-     image: saiprasad169/website-test:10
+     image: saiprasad169/website-test:12
      ports:
      - "8089:80"
      deploy:
