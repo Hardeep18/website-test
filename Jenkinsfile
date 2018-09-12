@@ -13,6 +13,8 @@ node ('prod') {
              sh "hostname"
              echo "${env.BUILD_NUMBER}"
              sh 'docker build -t saiprasad169/website-test -f webpage .'
+             echo "${env.BUILD_NUMBER}"
+             sh "docker tag saiprasad169/website-test saiprasad169/website-test:${env.BUILD_NUMBER} "
              pwd 
              sh "hostname"
     }
