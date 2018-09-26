@@ -29,7 +29,7 @@ node ('prod1') {
     stage('Deploy ') {  
           /* sh " docker service create --name web -p 9089:80  saiprasad169/website-test:${env.BUILD_NUMBER}"  */
                     echo "saiprasad169/website-test:${env.BUILD_NUMBER}"
-                     sh " sed -i 's/website-test/website-test:${env.BUILD_NUMBER}/g' docker-stack.ymlk
+                     sh " sed -i 's/website-test/website-test:${env.BUILD_NUMBER}/g' docker-stack.yml"
                     sh "docker stack deploy -c docker-stack.yml website" 
          }
    }
