@@ -27,7 +27,7 @@ node ('prod') {
            }
    }
     stage('Deploy ') {  
-            sh " docker srevice create --name web -p 9089:80  saiprasad169/website-test:${env.BUILD_NUMBER}"  
-      /* sh "docker stack deploy -c docker-stack.yml website" */
+        /*    sh " docker srevice create --name web -p 9089:80  saiprasad169/website-test:${env.BUILD_NUMBER}"  */
+       sh "docker stack deploy -c docker-stack.yml website" 
          }
    }
