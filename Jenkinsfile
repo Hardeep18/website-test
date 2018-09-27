@@ -19,7 +19,7 @@ node ('prod1') {
              sh "hostname"
     }
     stage('Push Image') {
-            withDockerRegistry([ credentialsId: "42245d01-a133-43c0-b2cf-50947f2160a8", url: "" ])
+            withDockerRegistry([ credentialsId: "138f07a7-8be6-4c51-a0d0-4b4d286ef932", url: "" ])
            /* docker.withRegistry('https://registry.hub.docker.com', 'f4fc89d0-de17-47ed-b9f4-ab5ebbe5cf39') */ {
             echo "${env.BUILD_NUMBER}"
             sh "docker tag saiprasad169/website-test saiprasad169/website-test:${env.BUILD_NUMBER} "
